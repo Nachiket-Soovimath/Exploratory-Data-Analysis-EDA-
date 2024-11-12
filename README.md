@@ -3,7 +3,7 @@
         <p>This document provides a detailed analysis of the layoffs dataset using SQL queries. The goal is to gain insights about the layoffs across different industries, countries, companies, and years.</p>
     </header>
 
-    <section>
+   
         <h2>1. Initial Data Overview</h2>
         <p>The first query retrieves all the columns from the <code>layoffs_staging2</code> table, which gives us a snapshot of the data in its entirety.</p>
         <pre><code>
@@ -77,9 +77,8 @@ FROM layoffs_staging2
 GROUP BY stage
 ORDER BY 1 DESC;
         </code></pre>
-    </section>
+ 
 
-    <section>
         <h2>10. Rolling Sum of Layoffs</h2>
         <p>This section explores the rolling sum of layoffs by month. We first create a temporary table called <code>Rolling_Total</code> to group layoffs by month and calculate the total layoffs for each month. We then compute a cumulative sum (rolling total) of layoffs over time.</p>
         <pre><code>
@@ -123,6 +122,5 @@ SELECT *
 FROM Company_year_Rank
 WHERE Ranking <= 5;
         </code></pre>
-    </section>
     <h2>Conclusion</h2>
         <p>The above SQL queries provide a comprehensive view of the layoffs dataset, offering insights into the companies, industries, countries, and periods most affected by layoffs. The rolling sum helps in identifying trends over time, while ranking companies by layoffs per year gives a clearer view of which companies experienced the most significant layoffs.</p>
